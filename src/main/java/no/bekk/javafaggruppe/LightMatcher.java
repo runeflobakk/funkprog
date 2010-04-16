@@ -14,4 +14,8 @@ public class LightMatcher {
     public Matcher<Light> turnedOn = having(on(Light.class).isCurrently(ON));
     public Matcher<Light> turnedOff = having(on(Light.class).isCurrently(OFF));
 
+    public Matcher<Light> currently(LightState state) {
+        return having(on(Light.class).isCurrently(state));
+    }
+
 }

@@ -12,9 +12,9 @@ import org.junit.Test;
 
 public class LampTest {
 
+    private Lamp lamp;
     private Light light1;
     private Light light2;
-    private Lamp lamp;
 
     @Before
     public void setup() {
@@ -73,7 +73,7 @@ public class LampTest {
 
         Light newLight = new Light(15);
         lamp.replaceBrokenLightWith(newLight);
-        assertEquals(2, lamp.getLightAmount());
+        assertEquals(2, lamp.getAmountOfLights());
         assertEquals(0, lamp.getAmountOfLightsWhichAre(BROKEN));
     }
 
